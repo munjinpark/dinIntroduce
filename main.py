@@ -20,13 +20,14 @@ if 'message_list' not in st.session_state:
     st.session_state['message_list'] = []
 
 # 사용자 입력을 위한 텍스트 입력 상자 생성
-user_input = st.text_input("메시지를 입력하세요:", key="user_input")
+user_input = st.text_input("Din에게 궁금한 것을 물어보세요!:", key="user_input")
 
 # '전송' 버튼 추가
 if st.button('전송'):
     if user_input:  # 입력이 있을 경우
         with st.spinner('Wait for it...'):
             answer = st.session_state.langchain.ask_question(user_input)
+            print(answer)
             st.session_state.message_list.append(answer['result'])
         # 입력 상자 초기화
         st.experimental_rerun()
