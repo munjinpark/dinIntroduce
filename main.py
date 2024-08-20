@@ -30,7 +30,7 @@ if st.button('전송'):
             print(answer)
             st.session_state.message_list.append(answer['result'])
         # 입력 상자 초기화
-        st.experimental_rerun()
+        st.rerun()
 
 # 메시지의 길이에 따라 텍스트 상자의 높이를 조절하는 함수
 def calculate_text_area_height(text):
