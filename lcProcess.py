@@ -6,7 +6,7 @@ from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 
 class LangChainProcess:
-      def __init__(self, file_path, encoding="utf-8",   chunk_size=300, chunk_overlap=50):
+      def __init__(self, file_path, encoding="utf-8",   chunk_size=500, chunk_overlap=100):
             self.file_path = file_path
             self.encoding = encoding
             self.chunk_size = chunk_size
