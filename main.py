@@ -15,7 +15,7 @@ st.title('Din. Introduce GPT')
 if 'message_list' not in st.session_state:
     st.session_state.langchain = LangChainProcess("din.txt")
     st.session_state.langchain.load_text()
-    st.session_state.langchain.split_text()
+    # st.session_state.langchain.split_text()
     st.session_state.langchain.create_embeddings()
     st.session_state['message_list'] = []
 
