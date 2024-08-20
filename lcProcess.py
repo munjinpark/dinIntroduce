@@ -30,7 +30,8 @@ class LangChainProcess:
 
       def create_embeddings(self):
             embeddings_model = OpenAIEmbeddings()
-            self.db = Chroma.from_documents(self.texts, embeddings_model)
+            # self.db = Chroma.from_documents(self.texts, embeddings_model)
+            self.db = Chroma.from_documents(self.docs, embeddings_model)
 
       def ask_question(self, question):
             llm = ChatOpenAI(temperature=0)
